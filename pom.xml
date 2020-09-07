@@ -7,6 +7,11 @@
     <groupId>org.example</groupId>
     <artifactId>rhyme-generator</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
         <dependency>
@@ -14,9 +19,27 @@
             <artifactId>jsoup</artifactId>
             <version>1.7.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>13.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>13</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.4</version>
+                    <configuration>
+                        <mainClass>StartMenu</mainClass>
+                    </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
